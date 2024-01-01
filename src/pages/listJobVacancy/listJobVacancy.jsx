@@ -226,7 +226,7 @@ export default function ListJobVacancy() {
             cell: (row) => (
                 <>
                     <button
-                        className="btn btn-sm btn-error mr-2"
+                        className="mr-2 btn btn-sm btn-error"
                         onClick={() => handleDelete(row.id)}
                     >
                         Delete
@@ -243,12 +243,12 @@ export default function ListJobVacancy() {
     ];
 
     return (
-        <div className="bg-lime-50 px-6 py-6 lg:px-12">
+        <div className="px-6 py-6 bg-lime-50 lg:px-12">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>List Job Vacancy | J-VAC</title>
             </Helmet>
-            <div className="card rounded-lg p-2 bg-white shadow-lg">
+            <div className="p-2 bg-white rounded-lg shadow-lg card">
                 {isEditing ? (
                     <EditJobVacancy
                         isEditing={isEditing}
@@ -277,13 +277,13 @@ export default function ListJobVacancy() {
                                         type="text"
                                         placeholder="Search Title"
                                         onChange={handleSearch}
-                                        className="input input-bordered mb-2 w-full lg:w-8/12"
+                                        className="w-full mb-2 input input-bordered lg:w-8/12"
                                     />
-                                    <div className="lg:space-x-2 space-y-2">
+                                    <div className="space-y-2 lg:space-x-2">
                                         <input
                                             type="text"
                                             placeholder="Filter by City"
-                                            className="input input-bordered w-full lg:w-2/12 mr-2"
+                                            className="w-full mr-2 input input-bordered lg:w-2/12"
                                             value={companyCityFilter}
                                             onChange={(e) =>
                                                 setCompanyCityFilter(
@@ -294,7 +294,7 @@ export default function ListJobVacancy() {
                                         <input
                                             type="text"
                                             placeholder="Filter by Company Name"
-                                            className="input input-bordered w-full lg:w-2/12"
+                                            className="w-full input input-bordered lg:w-2/12"
                                             value={companyNameFilter}
                                             onChange={(e) =>
                                                 setCompanyNameFilter(
@@ -305,7 +305,7 @@ export default function ListJobVacancy() {
                                         <input
                                             type="number"
                                             placeholder="Filter Min Salary"
-                                            className="input input-bordered w-full lg:w-2/12"
+                                            className="w-full input input-bordered lg:w-2/12"
                                             value={salaryMinFilter}
                                             onChange={(e) =>
                                                 setSalaryMinFilter(
@@ -314,13 +314,13 @@ export default function ListJobVacancy() {
                                             }
                                         />
                                         <button
-                                            className="btn btn-secondary w-full lg:w-2/12"
+                                            className="w-full btn btn-secondary lg:w-2/12"
                                             onClick={handleSearch}
                                         >
                                             Filter
                                         </button>
                                         <button
-                                            className="btn btn-warning w-full lg:w-2/12"
+                                            className="w-full btn btn-warning lg:w-2/12"
                                             onClick={handleResetFilters}
                                         >
                                             Reset
