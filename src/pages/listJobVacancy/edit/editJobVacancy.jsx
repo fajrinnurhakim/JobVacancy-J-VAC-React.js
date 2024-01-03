@@ -14,11 +14,11 @@ export default function EditJobVacancy(props) {
 
     return (
         <div>
-            <div className="card w-full mx-auto p-3 bg-white">
-                <h1 className="text-4xl text-center font-bold">
+            <div className="w-full p-3 mx-auto bg-white card">
+                <h1 className="text-4xl font-bold text-center">
                     Update Job Vacancy
                 </h1>
-                <div className="form-control w-full space-y-2">
+                <div className="w-full space-y-2 form-control">
                     <div className="flex flex-row space-x-5">
                         <div className="w-full">
                             <label className="label" htmlFor="title">
@@ -33,7 +33,7 @@ export default function EditJobVacancy(props) {
                                     handleInputChange("title", e.target.value)
                                 }
                                 placeholder="Title"
-                                className="input input-bordered w-full"
+                                className="w-full input input-bordered"
                                 required
                             />
                         </div>
@@ -54,7 +54,7 @@ export default function EditJobVacancy(props) {
                                     )
                                 }
                                 placeholder="Company name"
-                                className="input input-bordered w-full"
+                                className="w-full input input-bordered"
                                 required
                             />
                         </div>
@@ -77,7 +77,7 @@ export default function EditJobVacancy(props) {
                                 )
                             }
                             placeholder="Job description"
-                            className="textarea textarea-bordered w-full"
+                            className="w-full textarea textarea-bordered"
                             required
                         />
                     </div>
@@ -100,7 +100,7 @@ export default function EditJobVacancy(props) {
                                 )
                             }
                             placeholder="Job qualification"
-                            className="textarea textarea-bordered w-full"
+                            className="w-full textarea textarea-bordered"
                             required
                         />
                     </div>
@@ -121,7 +121,7 @@ export default function EditJobVacancy(props) {
                                         e.target.value
                                     )
                                 }
-                                className="select select-bordered w-full"
+                                className="w-full select select-bordered"
                                 required
                             >
                                 <option value="Hybrid">Hybrid</option>
@@ -146,7 +146,7 @@ export default function EditJobVacancy(props) {
                                         e.target.value
                                     )
                                 }
-                                className="select select-bordered w-full"
+                                className="w-full select select-bordered"
                                 required
                             >
                                 <option value="Kontrak">Kontrak</option>
@@ -161,7 +161,7 @@ export default function EditJobVacancy(props) {
                     <div className="flex flex-row space-x-5">
                         <div className="w-full">
                             <label className="label" htmlFor="salary_min">
-                                <span className="label-text">Salary Min</span>
+                                <span className="label-text">Min Salary</span>
                             </label>
                             <input
                                 id="salary_min"
@@ -175,7 +175,7 @@ export default function EditJobVacancy(props) {
                                     )
                                 }
                                 placeholder="Salary Min"
-                                className="input input-bordered w-full"
+                                className="w-full input input-bordered"
                                 required
                             />
                         </div>
@@ -196,7 +196,7 @@ export default function EditJobVacancy(props) {
                                     )
                                 }
                                 placeholder="Salary Max"
-                                className="input input-bordered w-full"
+                                className="w-full input input-bordered"
                                 required
                             />
                         </div>
@@ -220,7 +220,7 @@ export default function EditJobVacancy(props) {
                                 )
                             }
                             placeholder="Company image url"
-                            className="input input-bordered w-full"
+                            className="w-full input input-bordered"
                             required
                         />
                     </div>
@@ -241,7 +241,7 @@ export default function EditJobVacancy(props) {
                                 )
                             }
                             placeholder="Company city"
-                            className="input input-bordered w-full"
+                            className="w-full input input-bordered"
                             required
                         />
                     </div>
@@ -258,7 +258,7 @@ export default function EditJobVacancy(props) {
                             onChange={(e) =>
                                 handleInputChange("job_status", e.target.value)
                             }
-                            className="select select-bordered w-full"
+                            className="w-full select select-bordered"
                             required
                         >
                             <option value="0">0(close)</option>
@@ -266,7 +266,7 @@ export default function EditJobVacancy(props) {
                         </select>
                     </div>
 
-                    <div className="w-full flex flex-col space-y-2">
+                    <div className="flex flex-col w-full space-y-2">
                         <button
                             className="btn btn-secondary"
                             onClick={handleEdit}
