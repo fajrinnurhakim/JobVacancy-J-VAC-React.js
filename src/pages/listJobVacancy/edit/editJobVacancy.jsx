@@ -160,7 +160,7 @@ export default function EditJobVacancy(props) {
 
                     <div className="flex flex-row space-x-5">
                         <div className="w-full">
-                            <label className="label" htmlFor="salary_min">
+                            <label className="label" htmlFor="salary_minn">
                                 <span className="label-text">Salary Min</span>
                             </label>
                             <input
