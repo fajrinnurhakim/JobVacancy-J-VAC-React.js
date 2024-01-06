@@ -164,7 +164,7 @@ export default function EditJobVacancy(props) {
                                 <span className="label-text">Salary Min</span>
                             </label>
                             <input
-                                id="salary_min"
+                                id="salary_min "
                                 type="number"
                                 name="salary_min"
                                 value={editFormData.salary_min}
