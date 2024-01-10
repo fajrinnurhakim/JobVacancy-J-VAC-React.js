@@ -181,7 +181,7 @@ export default function EditJobVacancy(props) {
                         </div>
 
                         <div className="w-full">
-                            <label className="label" htmlFor="salary_max">
+                            <label className="label" htmlFor="salary_max ">
                                 <span className="label-text">Salary Max</span>
                             </label>
                             <input
