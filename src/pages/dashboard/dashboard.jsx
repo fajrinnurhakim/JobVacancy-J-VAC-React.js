@@ -17,7 +17,7 @@ export default function Dashboard() {
                         Post Your Job Vacancy
                     </h1>
                     <p className="text-xs lg:text-sm">
-                        Create job listings for the positions you're offering.
+                        Create job listings for the positions you are offering.
                         Receive daily notifications and directly accept
                         applications from potential candidates. Sign up now for
                         free and start posting your job vacancies.
