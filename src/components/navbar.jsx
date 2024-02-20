@@ -41,11 +41,11 @@ export default function NavigationBar() {
             }`}
         >
             <div className="navbar-start">
-                <div className="dropdown" onClick={toggleDropdown}>
-                    <label tabIndex="0" className="btn btn-ghost lg:hidden">
+                <details class="dropdown">
+                    <summary class="m-1 btn btn-ghost lg:hidden">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
+                            className="w-5 h-5"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -57,37 +57,30 @@ export default function NavigationBar() {
                                 d="M4 6h16M4 12h8m-8 6h16"
                             />
                         </svg>
-                    </label>
-
-                    {dropdownOpen && (
-                        <ul
-                            tabIndex="0"
-                            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-                            onClick={closeDropdown}
-                        >
-                            <li className="hover:bg-secondary rounded-md">
-                                <a href="/">
-                                    <img
-                                        src="/assets/home.svg"
-                                        alt="navbar"
-                                        className="w-5 h-5"
-                                    />
-                                    Home
-                                </a>
-                            </li>
-                            <li className="hover:bg-secondary rounded-md">
-                                <a href="/job-vacancy">
-                                    <img
-                                        src="/assets/jobvacancy.svg"
-                                        alt="navbar"
-                                        className="w-5 h-5"
-                                    />
-                                    Job Vacancy
-                                </a>
-                            </li>
-                        </ul>
-                    )}
-                </div>
+                    </summary>
+                    <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                        <li className="rounded-md hover:bg-secondary">
+                            <a href="/">
+                                <img
+                                    src="/assets/home.svg"
+                                    alt="navbar"
+                                    className="w-5 h-5"
+                                />
+                                Home
+                            </a>
+                        </li>
+                        <li className="rounded-md hover:bg-secondary">
+                            <a href="/job-vacancy">
+                                <img
+                                    src="/assets/jobvacancy.svg"
+                                    alt="navbar"
+                                    className="w-5 h-5"
+                                />
+                                Job Vacancy
+                            </a>
+                        </li>
+                    </ul>
+                </details>
 
                 <a href="/" className="hidden lg:block">
                     <img
@@ -99,11 +92,11 @@ export default function NavigationBar() {
             </div>
 
             <div className="navbar-center">
-                <ul className="menu menu-horizontal px-1 hidden lg:flex">
-                    <li className="hover:bg-secondary rounded-md">
+                <ul className="hidden px-1 menu menu-horizontal lg:flex">
+                    <li className="rounded-md hover:bg-secondary">
                         <a href="/">Home</a>
                     </li>
-                    <li className="hover:bg-secondary rounded-md">
+                    <li className="rounded-md hover:bg-secondary">
                         <a href="/job-vacancy">Job Vacancy</a>
                     </li>
                 </ul>
@@ -115,14 +108,13 @@ export default function NavigationBar() {
                     />
                 </a>
             </div>
-            
+
             <div className="navbar-end">
-                {!isLoginPage &&
-                    !isRegisterPage && ( 
-                        <a href="/login" className="btn btn-sm btn-secondary">
-                            LOGIN
-                        </a>
-                    )}
+                {!isLoginPage && !isRegisterPage && (
+                    <a href="/login" className="btn btn-sm btn-secondary">
+                        LOGIN
+                    </a>
+                )}
             </div>
         </div>
     );
